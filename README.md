@@ -74,11 +74,3 @@ YOUR TIME IS UP
 
 SUPERSLAM arr
 ```
-
-## DieRoller.cna
-```
-SLAM "How many sides? "
-sides = YOU CANT SEE ME
-result = THE UNDERTAKER (FIVE KNUCKLE SHUFFLE * sides + 1)
-SLAM "You rolled: " + result
-```
