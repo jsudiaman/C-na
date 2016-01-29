@@ -1,12 +1,11 @@
 # C-na
-The WWE-approved programming language.
 
 ## Prerequisite Software
 [Java 8 or later](http://java.com/)
 
 ## Quick Start
-1. [Download Cna.jar](https://www.dropbox.com/s/7v01qvg3a3q72ip/Cna.jar?dl=1)
-2. [Download HelloWorld.cna](https://www.dropbox.com/s/osflqvn3ce4yvvk/HelloWorld.cna?dl=1)
+1. [Download Cna.jar](http://sudicode.com/c-na/Cna.jar)
+2. [Download HelloWorld.cna](http://sudicode.com/c-na/HelloWorld.cna)
 3. ```java -jar Cna.jar HelloWorld.cna```
 
 ## C-na Syntax
