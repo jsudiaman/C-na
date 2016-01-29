@@ -1,0 +1,33 @@
+apply plugin: "java"
+apply plugin: "eclipse"
+apply plugin: "antlr"
+apply plugin: "application"
+
+mainClassName = "Main"
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.8'
+}
+
+generateGrammarSource {
+    doLast {
+        delete 'src/main/java/ExprBaseListener.java', 'src/main/java/ExprBaseVisitor.java', 'src/main/java/ExprLexer.java', 'src/main/java/ExprListener.java', 'src/main/java/ExprParser.java', 'src/main/java/ExprVisitor.java', 'src/main/java/Expr.tokens', 'src/main/java/ExprLexer.tokens'
+        copy {
+            from 'build/generated-src/antlr/main/'
+            into 'src/main/java'
+        }
+        delete 'build/generated-src/antlr/main/'
+    }
+    arguments += ["-visitor", "-long-messages"]
+}
+
+repositories {
+    mavenCentral()
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+    mavenLocal();
+}
+
+dependencies {
+    antlr "org.antlr:antlr4:4.5.1-1"
+    compile 'org.antlr:antlr4-runtime:4.5.1-1'
+}
