@@ -4,9 +4,12 @@
 [Java 8 or later](http://java.com/)
 
 ## Quick Start
-1. [Download Cna.jar](http://sudicode.com/c-na/Cna.jar)
-2. [Download HelloWorld.cna](http://sudicode.com/c-na/HelloWorld.cna)
-3. ```java -jar Cna.jar HelloWorld.cna```
+[Download Cna.jar](http://sudicode.com/c-na/Cna.jar)
+[Download HelloWorld.cna](http://sudicode.com/c-na/HelloWorld.cna)
+```
+cd Downloads
+java -jar Cna.jar HelloWorld.cna
+```
 
 ## C-na Syntax
 | Keyword             | Definition                                                                 |
