@@ -4,6 +4,15 @@
 [Java 8 or later](http://java.com/)
 
 ## Quick Start
+
+#### Option 1: Using GNU Wget
+```
+wget http://sudicode.com/c-na/Cna.jar
+wget http://sudicode.com/c-na/HelloWorld.cna
+java -jar Cna.jar HelloWorld.cna
+```
+
+#### Option 2: Downloading Manually
 * [Download Cna.jar](http://sudicode.com/c-na/Cna.jar)
 * [Download HelloWorld.cna](http://sudicode.com/c-na/HelloWorld.cna)
 ```
