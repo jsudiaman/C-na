@@ -7,8 +7,8 @@
 
 #### Option 1: Using GNU Wget
 ```
-wget http://sudicode.com/c-na/Cna.jar
-wget http://sudicode.com/c-na/HelloWorld.cna
+curl -O http://sudicode.com/c-na/Cna.jar
+curl -O http://sudicode.com/c-na/HelloWorld.cna
 java -jar Cna.jar HelloWorld.cna
 ```
 
