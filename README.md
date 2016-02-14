@@ -5,7 +5,7 @@
 
 ## Quick Start
 
-#### Option 1: Using GNU Wget
+#### Option 1: Using cURL
 ```
 curl -O http://sudicode.com/c-na/Cna.jar
 curl -O http://sudicode.com/c-na/HelloWorld.cna
