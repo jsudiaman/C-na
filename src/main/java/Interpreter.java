@@ -2,7 +2,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 import java.util.Scanner;
 
 import org.antlr.v4.runtime.tree.ParseTree;
@@ -79,7 +78,7 @@ public class Interpreter extends ExprBaseVisitor<Object> {
 				while (index >= s.length()) {
 					s.append('\0');
 				}
-				s.setCharAt(index, (char) this.visit(stmt.right));
+				s.setCharAt(index, (Character) this.visit(stmt.right));
 			}
 
 			return this.visit(stmt.right);
@@ -103,12 +102,12 @@ public class Interpreter extends ExprBaseVisitor<Object> {
 				System.out.print(this.visit(stmt.sub));
 				break;
 			case ExprParser.WHILE:
-				while ((boolean) this.visit(stmt.condition)) {
+				while ((Boolean) this.visit(stmt.condition)) {
 					this.visit(stmt.loop);
 				}
 				break;
 			case ExprParser.IF:
-				boolean condition = (boolean) this.visit(stmt.condition);
+				boolean condition = (Boolean) this.visit(stmt.condition);
 				if (condition) {
 					this.visit(stmt.loop);
 				} else if (stmt.elsedir != null) {
@@ -136,9 +135,9 @@ public class Interpreter extends ExprBaseVisitor<Object> {
 			case ExprParser.RANDOM:
 				return Math.random();
 			case ExprParser.FLOOR:
-				Optional<Double> d = Evaluator.maybeNumeric(this.visit(expr.right));
-				if (d.isPresent()) {
-					return new Double(Math.floor(d.get())).intValue();
+				Double d = Evaluator.maybeNumeric(this.visit(expr.right));
+				if (d != null) {
+					return new Double(Math.floor(d)).intValue();
 				}
 				throw new IllegalArgumentException("Cannot use floor on " + this.visit(expr.right));
 			}

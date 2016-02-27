@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 /**
  * Helper class used to simulate dynamic typing. This class cannot be
@@ -28,11 +27,11 @@ public final class Evaluator {
 	 */
 	public static boolean evaluateCondition(Object left, Object right, int op) {
 		// If left and right are numeric, then they are comparable.
-		Optional<Double> numericLeft = maybeNumeric(left);
-		Optional<Double> numericRight = maybeNumeric(right);
-		if (numericLeft.isPresent() && numericRight.isPresent()) {
-			Double l = numericLeft.get();
-			Double r = numericRight.get();
+		Double numericLeft = maybeNumeric(left);
+		Double numericRight = maybeNumeric(right);
+		if (numericLeft != null && numericRight != null) {
+			Double l = numericLeft;
+			Double r = numericRight;
 
 			switch (op) {
 			case ExprParser.LT:
@@ -150,7 +149,7 @@ public final class Evaluator {
 		// The plus operation is valid for some non-numerical types.
 		else if (op == ExprParser.PLUS) {
 			if (left instanceof List && right instanceof List) {
-				List<Object> list = new ArrayList<>();
+				List<Object> list = new ArrayList<Object>();
 				list.addAll((List<?>) left);
 				list.addAll((List<?>) right);
 				return list;
@@ -168,18 +167,16 @@ public final class Evaluator {
 	 * 
 	 * @param o
 	 *            An object
-	 * @return An {@link Optional} that wraps the {@link Double}, if present. To
-	 *         check if the {@link Double} is present, use
-	 *         {@link Optional#isPresent()}. To unwrap it, use
-	 *         {@link Optional#get()}.
+	 * @return A {@link Double}, or <code>null</code> if the conversion is
+	 *         unsuccessful.
 	 */
-	public static Optional<Double> maybeNumeric(Object o) {
-		Optional<Double> num = Optional.empty();
+	public static Double maybeNumeric(Object o) {
+		Double num = null;
 		if (o instanceof Double) {
-			num = Optional.of((Double) o);
+			num = (Double) o;
 		} else if (o instanceof Integer) {
 			Integer i = (Integer) o;
-			num = Optional.of((Double.valueOf(i)));
+			num = (Double.valueOf(i));
 		}
 		return num;
 	}
