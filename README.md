@@ -1,7 +1,7 @@
 # C-na
 
 ## Prerequisite Software
-[Java 8 or later](http://java.com/)
+[Java 6 or later](http://java.com/)
 
 ## Quick Start
 
