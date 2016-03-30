@@ -12,6 +12,15 @@ task wrapper(type: Wrapper) {
     gradleVersion = '2.8'
 }
 
+task fatJar(type: Jar) {
+	manifest {
+        attributes 'Main-Class': 'Main'
+    }
+    baseName = project.name + '-all'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
+
 generateGrammarSource {
     doLast {
         delete 'src/main/java/ExprBaseListener.java', 'src/main/java/ExprBaseVisitor.java', 'src/main/java/ExprLexer.java', 'src/main/java/ExprListener.java', 'src/main/java/ExprParser.java', 'src/main/java/ExprVisitor.java', 'src/main/java/Expr.tokens', 'src/main/java/ExprLexer.tokens'

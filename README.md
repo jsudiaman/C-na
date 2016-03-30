@@ -4,20 +4,19 @@
 [Java 6 or later](http://java.com/)
 
 ## Quick Start
-
-#### Option 1: Using cURL
 ```
-curl -O http://sudicode.com/c-na/Cna.jar
-curl -O http://sudicode.com/c-na/HelloWorld.cna
+curl -O https://github.com/sudiamanj/C-na/releases/download/v1.0/Cna.jar
+echo 'SUPERSLAM "Hello world!"' > HelloWorld.cna
 java -jar Cna.jar HelloWorld.cna
 ```
 
-#### Option 2: Downloading Manually
-* [Download Cna.jar](http://sudicode.com/c-na/Cna.jar)
-* [Download HelloWorld.cna](http://sudicode.com/c-na/HelloWorld.cna)
+## Building from Source
 ```
-cd Downloads
-java -jar Cna.jar HelloWorld.cna
+git clone https://github.com/sudiamanj/C-na.git
+cd C-na
+./gradlew fatJar
+cp build/libs/C-na-all.jar Cna.jar
+java -jar Cna.jar examples/HelloWorld.cna
 ```
 
 ## C-na Syntax
@@ -55,34 +54,3 @@ java -jar Cna.jar HelloWorld.cna
 | ``^``                    | Power operator.                                             |
 | ``THE UNDERTAKER``       | Converts the given expression to an integer, rounding down. |
 | ``FIVE KNUCKLE SHUFFLE`` | A random double between 0 and 1.                            |
-
-## FizzBuzz.cna
-```
-i = 1
-arr = []
-
-SLAM "Enter the max: "
-MAX = YOU CANT SEE ME
-MY TIME IS NOW (i <= MAX)
-	divBy3 = (i % 3) == 0
-	divBy5 = (i % 5) == 0
-
-	HUSTLE (divBy3 && divBy5)
-		arr[i] = "Fizz Buzz"
-	WHAT NOW
-		HUSTLE (divBy3)
-			arr[i] = "Fizz"
-		WHAT NOW
-			HUSTLE (divBy5)
-				arr[i] = "Buzz"
-			WHAT NOW
-				arr[i] = i
-			YOUR TIME IS UP
-		YOUR TIME IS UP
-	YOUR TIME IS UP
-
-	i = (i+1)
-YOUR TIME IS UP
-
-SUPERSLAM arr
-```
