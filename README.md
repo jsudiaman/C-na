@@ -55,7 +55,7 @@ java -jar Cna.jar sample-programs/FizzBuzz.cna
 | ``THE UNDERTAKER``       | Converts the given expression to an integer, rounding down. |
 | ``FIVE KNUCKLE SHUFFLE`` | A random double between 0 and 1.                            |
 
-## [FizzBuzz.cna]
+## FizzBuzz.cna
 ```
 i = 1
 arr = []
