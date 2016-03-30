@@ -5,7 +5,7 @@
 
 ## Quick Start
 ```
-curl -O https://github.com/sudiamanj/C-na/releases/download/v1.0/Cna.jar
+curl -O http://sudicode.com/C-na/Cna.jar
 echo 'SUPERSLAM "Hello world!"' > HelloWorld.cna
 java -jar Cna.jar HelloWorld.cna
 ```
@@ -16,7 +16,7 @@ git clone https://github.com/sudiamanj/C-na.git
 cd C-na
 ./gradlew fatJar
 cp build/libs/C-na-all.jar Cna.jar
-java -jar Cna.jar examples/HelloWorld.cna
+java -jar Cna.jar sample-programs/FizzBuzz.cna
 ```
 
 ## C-na Syntax
