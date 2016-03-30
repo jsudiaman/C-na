@@ -55,4 +55,33 @@ java -jar Cna.jar sample-programs/FizzBuzz.cna
 | ``THE UNDERTAKER``       | Converts the given expression to an integer, rounding down. |
 | ``FIVE KNUCKLE SHUFFLE`` | A random double between 0 and 1.                            |
 
-### [Sample Programs](https://github.com/sudiamanj/C-na/tree/master/sample-programs)
+## [FizzBuzz.cna]
+```
+i = 1
+arr = []
+
+SLAM "Enter the max: "
+MAX = YOU CANT SEE ME
+MY TIME IS NOW (i <= MAX)
+	divBy3 = (i % 3) == 0
+	divBy5 = (i % 5) == 0
+
+	HUSTLE (divBy3 && divBy5)
+		arr[i] = "Fizz Buzz"
+	WHAT NOW
+		HUSTLE (divBy3)
+			arr[i] = "Fizz"
+		WHAT NOW
+			HUSTLE (divBy5)
+				arr[i] = "Buzz"
+			WHAT NOW
+				arr[i] = i
+			YOUR TIME IS UP
+		YOUR TIME IS UP
+	YOUR TIME IS UP
+
+	i = (i+1)
+YOUR TIME IS UP
+
+SUPERSLAM arr
+```
