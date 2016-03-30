@@ -4,7 +4,11 @@
 [Java 6 or later](http://java.com/)
 
 ## Quick Start
-`curl -O http://sudicode.com/C-na/Cna.jar && echo 'SUPERSLAM "Hello World!"' > HelloWorld.cna && java -jar Cna.jar HelloWorld.cna`
+```
+curl -O http://sudicode.com/C-na/Cna.jar
+echo 'SUPERSLAM "Hello World!"' > HelloWorld.cna
+java -jar Cna.jar HelloWorld.cna
+```
 
 ## Building from Source
 ```
@@ -50,3 +54,5 @@ java -jar Cna.jar sample-programs/FizzBuzz.cna
 | ``^``                    | Power operator.                                             |
 | ``THE UNDERTAKER``       | Converts the given expression to an integer, rounding down. |
 | ``FIVE KNUCKLE SHUFFLE`` | A random double between 0 and 1.                            |
+
+## [Sample Programs](https://github.com/sudiamanj/C-na/tree/master/sample-programs)
