@@ -4,11 +4,7 @@
 [Java 6 or later](http://java.com/)
 
 ## Quick Start
-```
-curl -O http://sudicode.com/C-na/Cna.jar
-echo 'SUPERSLAM "Hello world!"' > HelloWorld.cna
-java -jar Cna.jar HelloWorld.cna
-```
+`curl -O http://sudicode.com/C-na/Cna.jar && echo 'SUPERSLAM "Hello World!"' > HelloWorld.cna && java -jar Cna.jar HelloWorld.cna`
 
 ## Building from Source
 ```
