@@ -6,7 +6,7 @@
 ## Quick Start
 ```
 curl -O http://sudicode.com/C-na/Cna.jar
-echo 'SUPERSLAM "Hello world!"' > HelloWorld.cna
+echo -e "SUPERSLAM \"Hello world!\"" > HelloWorld.cna
 java -jar Cna.jar HelloWorld.cna
 ```
 
