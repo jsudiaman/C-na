@@ -13,9 +13,7 @@ task wrapper(type: Wrapper) {
 }
 
 task fatJar(type: Jar) {
-	manifest {
-        attributes 'Main-Class': 'Main'
-    }
+    manifest { attributes 'Main-Class': 'Main' }
     baseName = project.name + '-all'
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
     with jar
