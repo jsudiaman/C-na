@@ -77,7 +77,7 @@ YOUR TIME IS UP
 SUPERSLAM arr
 ```
 
-## Building from Source
+## Building C-na from Source
 ```
 git clone https://github.com/sudiamanj/C-na.git
 cd C-na
