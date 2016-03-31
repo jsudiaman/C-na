@@ -10,15 +10,6 @@ echo 'SUPERSLAM "Hello world!"' > HelloWorld.cna
 java -jar Cna.jar HelloWorld.cna
 ```
 
-## Building from Source
-```
-git clone https://github.com/sudiamanj/C-na.git
-cd C-na
-./gradlew fatJar
-cp build/libs/C-na-all.jar Cna.jar
-java -jar Cna.jar sample-programs/FizzBuzz.cna
-```
-
 ## C-na Syntax
 | Keyword             | Definition                                                                 |
 |---------------------|----------------------------------------------------------------------------|
@@ -84,4 +75,13 @@ MY TIME IS NOW (i <= MAX)
 YOUR TIME IS UP
 
 SUPERSLAM arr
+```
+
+## Building from Source
+```
+git clone https://github.com/sudiamanj/C-na.git
+cd C-na
+./gradlew fatJar
+cp build/libs/C-na-all.jar Cna.jar
+java -jar Cna.jar sample-programs/FizzBuzz.cna
 ```
