@@ -1,6 +1,6 @@
 machine:
   environment:
-    jar_file: build/libs/C-na-all.jar
+    jar_file: C-na/build/libs/C-na-all.jar
 
 deployment:
   master:
