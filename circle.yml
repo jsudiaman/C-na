@@ -1,0 +1,10 @@
+machine:
+  environment:
+    jar_file: build/libs/C-na-all.jar
+
+deployment:
+  master:
+    branch: master
+    commands:
+      - ./gradlew fatJar
+      - mv ~/$jar_file $CIRCLE_ARTIFACTS/Cna.jar
