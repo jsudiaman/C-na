@@ -1,7 +1,7 @@
 # C-na
 [![CircleCI](https://circleci.com/gh/sudiamanj/C-na.svg?style=shield)](https://circleci.com/gh/sudiamanj/C-na) [![GNU LGPL v3](https://img.shields.io/badge/license-LGPLv3-blue.svg)](http://www.gnu.org/licenses/lgpl-3.0-standalone.html)
 
-## Prerequisite Software
+## Dependencies
 [Java 6 or later](http://java.com/)
 
 ## Quick Start
