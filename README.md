@@ -5,7 +5,7 @@
 [Java 6 or later](http://java.com/)
 
 ## Quick Start
-```
+```bash
 curl -O http://sudicode.com/C-na/Cna.jar
 echo 'SUPERSLAM "Hello world!"' > HelloWorld.cna
 java -jar Cna.jar HelloWorld.cna
@@ -86,7 +86,7 @@ Enter the max: 100
 ```
 
 ## Building C-na from Source
-```
+```bash
 git clone https://github.com/sudiamanj/C-na.git
 cd C-na
 ./gradlew fatJar
