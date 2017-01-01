@@ -1,12 +1,12 @@
 # C-na
-[![CircleCI](https://circleci.com/gh/sudiamanj/C-na.svg?style=shield)](https://circleci.com/gh/sudiamanj/C-na)
+[![Build Status](https://travis-ci.org/sudiamanj/C-na.svg?branch=master)](https://travis-ci.org/sudiamanj/C-na)
 
 ## Dependencies
 [Java 6 or later](http://java.com/)
 
 ## Quick Start
 ```bash
-curl -O http://sudicode.com/C-na/Cna.jar
+curl -O -L https://github.com/sudiamanj/C-na/releases/download/v1.0/Cna.jar
 echo 'SUPERSLAM "Hello world!"' > HelloWorld.cna
 java -jar Cna.jar HelloWorld.cna
 ```
