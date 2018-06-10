@@ -3,6 +3,13 @@
 ## Dependencies
 [Java 6 or later](http://java.com/)
 
+## Quick Start
+```shell
+curl -O -L https://gitlab.com/jsudiaman/C-na/-/jobs/artifacts/1.0.1/raw/Cna.jar?job=build
+echo 'SUPERSLAM "Hello world!"' > HelloWorld.cna
+java -jar Cna.jar HelloWorld.cna
+```
+
 ## C-na Syntax
 | Keyword             | Definition                                                                 |
 |---------------------|----------------------------------------------------------------------------|
@@ -78,7 +85,7 @@ Enter the max: 100
 ```
 
 ## Building C-na from Source
-```Shell
+```shell
 ./gradlew fatJar
 cp build/libs/C-na-all.jar Cna.jar
 java -jar Cna.jar sample-programs/FizzBuzz.cna
