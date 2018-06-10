@@ -5,7 +5,7 @@
 
 ## Quick Start
 ```shell
-curl -O -L https://gitlab.com/jsudiaman/C-na/-/jobs/artifacts/1.0.1/raw/Cna.jar?job=build
+curl -o Cna.jar -L https://gitlab.com/jsudiaman/C-na/-/jobs/artifacts/1.0.1/raw/Cna.jar?job=build
 echo 'SUPERSLAM "Hello world!"' > HelloWorld.cna
 java -jar Cna.jar HelloWorld.cna
 ```
