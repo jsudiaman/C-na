@@ -1,15 +1,7 @@
 # C-na
-[![Build Status](https://travis-ci.org/sudiamanj/C-na.svg?branch=master)](https://travis-ci.org/sudiamanj/C-na)
 
 ## Dependencies
 [Java 6 or later](http://java.com/)
-
-## Quick Start
-```bash
-curl -O -L https://github.com/sudiamanj/C-na/releases/download/v1.0/Cna.jar
-echo 'SUPERSLAM "Hello world!"' > HelloWorld.cna
-java -jar Cna.jar HelloWorld.cna
-```
 
 ## C-na Syntax
 | Keyword             | Definition                                                                 |
@@ -86,9 +78,7 @@ Enter the max: 100
 ```
 
 ## Building C-na from Source
-```bash
-git clone https://github.com/sudiamanj/C-na.git
-cd C-na
+```Shell
 ./gradlew fatJar
 cp build/libs/C-na-all.jar Cna.jar
 java -jar Cna.jar sample-programs/FizzBuzz.cna
