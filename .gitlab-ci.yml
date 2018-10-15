@@ -2,7 +2,7 @@ image: openjdk:7
 
 build:
   script:
-  - ./gradlew fatJar
+  - ./gradlew test fatJar
   - cp build/libs/C-na-all.jar Cna.jar
   artifacts:
     paths:
