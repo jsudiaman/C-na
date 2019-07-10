@@ -1,4 +1,5 @@
 # C-na
+[![Build Status](https://travis-ci.org/sudiamanj/C-na.svg?branch=master)](https://travis-ci.org/sudiamanj/C-na) [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=sudiamanj_C-na&metric=coverage)](https://sonarcloud.io/dashboard?id=sudiamanj_C-na)
 
 ## Dependencies
 [Java 6 or later](http://java.com/)
