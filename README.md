@@ -4,6 +4,13 @@
 ## Dependencies
 [Java 6 or later](http://java.com/)
 
+## Quick Start
+```shell
+curl -o Cna.jar -L https://github.com/sudiamanj/C-na/releases/download/1.0.0/Cna.jar
+echo 'SUPERSLAM "Hello world!"' > HelloWorld.cna
+java -jar Cna.jar HelloWorld.cna
+```
+
 ## C-na Syntax
 | Keyword             | Definition                                                                 |
 |---------------------|----------------------------------------------------------------------------|
