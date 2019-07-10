@@ -4,13 +4,6 @@
 ## Dependencies
 [Java 6 or later](http://java.com/)
 
-## Quick Start
-```shell
-curl -o Cna.jar -L https://gitlab.com/jsudiaman/C-na/-/jobs/artifacts/1.0.1/raw/Cna.jar?job=build
-echo 'SUPERSLAM "Hello world!"' > HelloWorld.cna
-java -jar Cna.jar HelloWorld.cna
-```
-
 ## C-na Syntax
 | Keyword             | Definition                                                                 |
 |---------------------|----------------------------------------------------------------------------|

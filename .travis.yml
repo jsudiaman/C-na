@@ -1,15 +1,20 @@
 language: java
 install: true
-
 jdk:
-  - oraclejdk8
-
+- oraclejdk8
 addons:
   sonarcloud:
-    organization: "sudiamanj-github"
+    organization: sudiamanj-github
     token:
-      secure: "Y6XEEjApWqfcNm6dD4O+vaUwzo4bbMMw+E/jDVLWw7Lo0KhBF1BZQ3spQ6PvaAzB9/JshojpQAptU66vGmk8HHK2VuIV0EJOF1AHBbsqutkWA7rzEclSVGpO/IP90UzU88Vq310G/y+JNhylMro5bgmVoX81i9lKpmiRg7yGyDE1QCtUartjhLFoJ/uZBco6FD3QZP4dXdUi7Uuf/E9kE7OsAuPPvIwF6ruQzu4whlyAb96eqjOsfXt8fOyxLySboRU0HWKzi+AboX+0S6xCZ2JK6zeI5PbO6YYDnzqhHEw/lRIyt9UWyJkc161GLS7YiIr2JlYZkLznbu2WMPKYm8DISJJzml+mtIZWO6xbmBg7SdXRJDBAsZBEgjYa2a2NsJt+LTEau+FQ6SaNKLWeFa8gljqNiM50LUP3MsO6RCwyf7ea5OEgOWv3MpIQhpS1xT0zS0ab+dRoqjf9JuX6Ia5zZcldvli7SFgGw+yrJJ4yggYOZchYkFVTZKtg4odOEEMV3Bo1NrQoqYVz9XcY2Xmo+KMsrjNjAML8/brnRRZAMXXYHo1yLVg7nJyrChtaWeXCTIugp2aHAwmPSxhe4wbOHts61zg66vfJUBHgTX8/jbCtLytmuD7lljhVpYetdUXy7IPbk1Bs5uKYzRUr2/gfdkgGG83wDaetqvcmapY="
-
+      secure: Y6XEEjApWqfcNm6dD4O+vaUwzo4bbMMw+E/jDVLWw7Lo0KhBF1BZQ3spQ6PvaAzB9/JshojpQAptU66vGmk8HHK2VuIV0EJOF1AHBbsqutkWA7rzEclSVGpO/IP90UzU88Vq310G/y+JNhylMro5bgmVoX81i9lKpmiRg7yGyDE1QCtUartjhLFoJ/uZBco6FD3QZP4dXdUi7Uuf/E9kE7OsAuPPvIwF6ruQzu4whlyAb96eqjOsfXt8fOyxLySboRU0HWKzi+AboX+0S6xCZ2JK6zeI5PbO6YYDnzqhHEw/lRIyt9UWyJkc161GLS7YiIr2JlYZkLznbu2WMPKYm8DISJJzml+mtIZWO6xbmBg7SdXRJDBAsZBEgjYa2a2NsJt+LTEau+FQ6SaNKLWeFa8gljqNiM50LUP3MsO6RCwyf7ea5OEgOWv3MpIQhpS1xT0zS0ab+dRoqjf9JuX6Ia5zZcldvli7SFgGw+yrJJ4yggYOZchYkFVTZKtg4odOEEMV3Bo1NrQoqYVz9XcY2Xmo+KMsrjNjAML8/brnRRZAMXXYHo1yLVg7nJyrChtaWeXCTIugp2aHAwmPSxhe4wbOHts61zg66vfJUBHgTX8/jbCtLytmuD7lljhVpYetdUXy7IPbk1Bs5uKYzRUr2/gfdkgGG83wDaetqvcmapY=
 script:
-  - ./gradlew sonarqube fatJar
-  - cp build/libs/C-na-all.jar Cna.jar
+- "./gradlew sonarqube fatJar"
+- cp build/libs/C-na-all.jar Cna.jar
+deploy:
+  provider: releases
+  api_key:
+    secure: 2Q7DS4mzU4/IOkxcxcmfvMu5A5hsRQdZuob9czqHCUXSlzdfFog75kcZG/SPVhw6dhnnl5WPchx7bZuusyAmHVkGvlRRcFGfe2LEdHp7CCAHm52IUK+LrlbgIc4GMya99Smbs027t+Xbkqn946Y61m1B2FjdjNEFE+0J4ejyjwrgxqDsXV6muIV1xrZxVHDIMrr21XWtZcKn02smV/dPe+fzBF9ldVV0VIccOLPUdhPEp6cov/ZDVmH/vnB1oTv7gHtoqBsTRh8Koil8IGc0sdfODNkbWdGH/5XAnA5OOuScAeLIljggBTD1suPFtO+V1CeDd7VBy+261FKdPN/51pQhJ2C0KhwkTS2NbPFbBU5EBiJnn84orxIWTabEx8QR7H0G0WTiuqFVwkfJLFUGgTF5Os5aLZVQ6yICzfRVnjxSOr0xdojWwBL2H6qPSiQjyRN8fHrlEaHULg9NQjiUaKqyOXIaeZaPdnBpZdUzcgQDOA6p8udd/IL+RLUq5xXKVyl2gyxoKy++H5udxWqgWOBHzBtkOrhmhLsuTQRh78BcxxR/izGMbM4obkJxuM1OocEHfsI5vsBZaxylPRC7kLTMGoGdfD87mBGT+2QHXuVBgy+DYY/gUlu97648qHUm6JNZd88qZ8nmYBajXp94A9ogjrIKIc9eyQqrnrGur+M=
+  file: Cna.jar
+  on:
+    repo: sudiamanj/C-na
+    tags: true
