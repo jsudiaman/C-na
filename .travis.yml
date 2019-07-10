@@ -15,6 +15,7 @@ deploy:
   api_key:
     secure: 2Q7DS4mzU4/IOkxcxcmfvMu5A5hsRQdZuob9czqHCUXSlzdfFog75kcZG/SPVhw6dhnnl5WPchx7bZuusyAmHVkGvlRRcFGfe2LEdHp7CCAHm52IUK+LrlbgIc4GMya99Smbs027t+Xbkqn946Y61m1B2FjdjNEFE+0J4ejyjwrgxqDsXV6muIV1xrZxVHDIMrr21XWtZcKn02smV/dPe+fzBF9ldVV0VIccOLPUdhPEp6cov/ZDVmH/vnB1oTv7gHtoqBsTRh8Koil8IGc0sdfODNkbWdGH/5XAnA5OOuScAeLIljggBTD1suPFtO+V1CeDd7VBy+261FKdPN/51pQhJ2C0KhwkTS2NbPFbBU5EBiJnn84orxIWTabEx8QR7H0G0WTiuqFVwkfJLFUGgTF5Os5aLZVQ6yICzfRVnjxSOr0xdojWwBL2H6qPSiQjyRN8fHrlEaHULg9NQjiUaKqyOXIaeZaPdnBpZdUzcgQDOA6p8udd/IL+RLUq5xXKVyl2gyxoKy++H5udxWqgWOBHzBtkOrhmhLsuTQRh78BcxxR/izGMbM4obkJxuM1OocEHfsI5vsBZaxylPRC7kLTMGoGdfD87mBGT+2QHXuVBgy+DYY/gUlu97648qHUm6JNZd88qZ8nmYBajXp94A9ogjrIKIc9eyQqrnrGur+M=
   file: Cna.jar
+  skip_cleanup: true
   on:
     repo: sudiamanj/C-na
     tags: true
