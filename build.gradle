@@ -1,5 +1,6 @@
 plugins {
   id "org.sonarqube" version "2.7"
+  id "jacoco"
 }
 
 sonarqube {
@@ -8,8 +9,11 @@ sonarqube {
   }
 }
 
+jacoco {
+  toolVersion = "0.8.4"
+}
+
 apply plugin: "java"
-apply plugin: "jacoco"
 apply plugin: "eclipse"
 apply plugin: "antlr"
 apply plugin: "application"
