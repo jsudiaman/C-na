@@ -49,6 +49,6 @@ plugins {
 
 sonarqube {
   properties {
-    sonar.projectKey: sudiamanj_C-na
+    property "sonar.projectKey", "sudiamanj_C-na"
   }
 }
